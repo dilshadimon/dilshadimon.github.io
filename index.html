@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Dilshad Imon — Home</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --blue-600:#125a9c;
+      --blue-50:#f4f8ff;
+      --text:#0b2540;
+      --muted:#5b6b7a;
+      --card-bg: #ffffff;
+      --radius: 12px;
+    }
+    *{box-sizing:border-box}
+    body{font-family:Inter,system-ui,Arial,sans-serif;color:var(--text);margin:0;background:var(--blue-50);-webkit-font-smoothing:antialiased}
+    header{background:linear-gradient(0deg, rgba(18,90,156,0.95), rgba(18,90,156,0.95));color:white;padding:18px 24px;position:sticky;top:0;z-index:20}
+    .container{max-width:1000px;margin:28px auto;padding:0 20px}
+    .nav{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:12px}
+    .brand h1{font-family:Merriweather,serif;font-weight:700;margin:0;font-size:20px}
+    nav a{color:white;text-decoration:none;margin-left:12px;font-weight:600}
+    .hero{display:grid;grid-template-columns:160px 1fr;gap:22px;align-items:center}
+    .photo img{width:160px;height:160px;border-radius:12px;object-fit:cover}
+    .card{background:var(--card-bg);padding:20px;border-radius:var(--radius);box-shadow:0 6px 18px rgba(9,30,66,0.06)}
+    .bio h2{margin:0 0 6px 0;font-family:Merriweather,serif}
+    .meta{color:var(--muted);margin-bottom:12px}
+    .links a{display:inline-block;margin-right:12px;color:var(--blue-600);text-decoration:none;font-weight:600}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:18px}
+    main{margin-top:18px}
+    h3{font-family:Merriweather,serif;margin:0 0 10px 0}
+    ul.publications{padding-left:18px;margin:0}
+    .pub-item{margin-bottom:10px}
+    footer{margin:48px 0 80px 0;color:var(--muted);text-align:center}
+    @media (max-width:800px){
+      .hero{grid-template-columns:110px 1fr}
+      .two-col{grid-template-columns:1fr}
+      header{padding:12px}
+      .brand h1{font-size:18px}
+      .photo img{width:110px;height:110px}
+    }
+    .btn{background:var(--blue-600);color:white;padding:8px 14px;border-radius:8px;text-decoration:none;display:inline-block}
+    .muted{color:var(--muted)}
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <div class="brand">
+        <div style="width:44px;height:44px;border-radius:8px;background:white;display:flex;align-items:center;justify-content:center;color:var(--blue-600);font-weight:700">DI</div>
+        <h1>Dilshad Imon</h1>
+      </div>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="cv.html">CV</a>
+      </nav>
+    </div>
+  </header>
+  <main class="container">
+    <section class="hero card">
+      <div class="photo">
+        <img src="f78cb3ca-7d57-4034-aa4f-1206a558130c.png" alt="Dilshad Imon portrait">
+      </div>
+      <div class="bio">
+        <h2>Dilshad Imon</h2>
+        <div class="meta">PhD Student, Department of Statistics and Operations Research<br>University of North Carolina at Chapel Hill</div>
+        <p>I am a Ph.D. student in the Department of Statistics and Operations Research at the University of North Carolina at Chapel Hill, currently supervised by Dr. Amarjit Budhiraja and Dr. Sayan Banerjee. My primary research interests are in Probability Theory and Stochastic Processes.</p>
+        <div class="links" style="margin-top:12px">
+          <a class="btn" href="cv.html">Download CV</a>
+          <a href="mailto:idilshad@unc.edu">idilshad@unc.edu</a>
+          <a href="https://scholar.google.com/citations?user=GkZa3YgAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        </div>
+      </div>
+    </section>
+  </main>
+  <footer>
+    <div class="container muted">© <span id="yr"></span> Dilshad Imon — University of North Carolina at Chapel Hill</div>
+  </footer>
+  <script>
+    document.getElementById('yr').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
